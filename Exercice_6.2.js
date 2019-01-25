@@ -1,4 +1,5 @@
 class Rectangle {
+
   constructor(topLeftXPos, topLeftYPos, width, lenght) {
     this.topLeftXPos = topLeftXPos;
     this.topLeftYPos = topLeftYPos;
@@ -7,6 +8,10 @@ class Rectangle {
   }
 
   collides(otherRectangle) {
-    
+
+  
+    // collision détectée !
+}
+
   }
 }

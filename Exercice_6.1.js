@@ -9,7 +9,6 @@ class Circle {
 
     return "Actaul x position is: " + this.xPos + " Actual y position is " + this.yPos +
       " The new x postion after move is: " + (this.xPos + xOffset) + " The new y postion after move is: " + (this.yPos + yOffset);
-
   }
 
   get surface() {

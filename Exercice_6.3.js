@@ -9,6 +9,7 @@
 class Rectangle {
 
   constructor(topLeftXPos, topLeftYPos, width, lenght) { // Constructor who make a rectangle.
+
     this.topLeftXPos = topLeftXPos;
     this.topLeftYPos = topLeftYPos;
     this.width = width;
@@ -17,25 +18,38 @@ class Rectangle {
 
   collides(otherRectangle) {
 
-    if (this.topLeftXPos < otherRectangle.topLeftXPos + otherRectangle.width &&  // This code verify the collission between two rectangle.
+    if (this.topLeftXPos < otherRectangle.topLeftXPos + otherRectangle.width && // This code verify the collission between two rectangle.
       this.topLeftXPos + this.width > otherRectangle.topLeftXPos &&
       this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.length &&
       this.length + this.topLeftYPos > otherRectangle.topLeftYPos) {
       return true; // collision détectée !
+
     } else {
       return "No collision detected";
     }
-
   }
 
 }
 
-  let allRectangle = [];
+let allRectangle = []; //Declare global array where function createRectangle push all rectangle.
+
+// Function who create 1000 random rectangle.
+let createRectangle = () => {
 
   for (let i = 1000; i > 0; i--) {
-    let rectangle = new Rectangle((Math.floor(Math.random() * 10000)), (Math.floor(Math.random() * 10000)),
-      (Math.floor(Math.random() * 300)), (Math.floor(Math.random() * 150)));
-      allRectangle.push(rectangle);
-  }
 
-console.log(allRectangle);
+    let rectangle = new Rectangle((Math.floor(Math.random() * 1000)), (Math.floor(Math.random() * 1000)), // Class Rectangle with random paramatre.
+      (Math.floor(Math.random() * 300)), (Math.floor(Math.random() * 150)));
+    allRectangle.push(rectangle);
+  }
+  return allRectangle;
+}
+createRectangle()
+
+let collidesAll = [];
+
+for (let i = 0; i < allRectangle.length - 1; i++) {
+  for (let j = 0; j < allRectangle.length - 1; j++) {
+    console.log(allRectangle[i].collides(allRectangle[0]));
+  }
+}

@@ -1,3 +1,10 @@
+/*
+**This code is a class with a constructor who make a 2D rectanglle with a constructor .
+**The class have a method who tcheck if two rectangle collide or not.
+**If he collide, the method return true.
+**Else, the method return "No collision detected".
+*/
+
 class Rectangle {
 
   constructor(topLeftXPos, topLeftYPos, width, lenght) {
@@ -13,7 +20,7 @@ class Rectangle {
       this.topLeftXPos + this.width > otherRectangle.topLeftXPos &&
       this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.length &&
       this.length + this.topLeftYPos > otherRectangle.topLeftYPos) {
-      return true;     // collision détectée !
+      return true; // collision détectée !
     } else {
       return "No collision detected";
     }
@@ -23,8 +30,8 @@ class Rectangle {
 }
 let rectangle1 = new Rectangle(25, 20, 150, 220);
 let rectangle2 = new Rectangle(385, 375, 100, 180).collides(rectangle1);
-console.log(rectangle2);  //Return no collision detected.
+console.log(rectangle2); //Return no collision detected.
 
 let rectangle3 = new Rectangle(25, 20, 150, 220);
 let rectangle4 = new Rectangle(45, 65, 100, 180).collides(rectangle3);
-console.log(rectangle4);  //Return true
+console.log(rectangle4); //Return true

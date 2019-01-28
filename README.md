@@ -5,8 +5,9 @@ Classes are mostly used in object-oriented programming which is a complex techni
 So instead we will have a brief overview of classes in JavaScript just before we finish this training.
 
 ## Theory
-```javascript
+
 ## Classes
+```javascript
 class Human {
   constructor(firstName, name) {
     this.firstName = firstName;

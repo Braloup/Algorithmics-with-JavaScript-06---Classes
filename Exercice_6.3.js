@@ -49,8 +49,8 @@ createRectangle()
 
 let collidesAll = [];
 
-for (let i = 0; i < allRectangle.length - 1; i++) { //Each rectangle is compared to all the others and returns its status.
-  for (let j = 0; j < allRectangle.length - 1; j++) {
+for (let i = 0; i < allRectangle.length - 1; i++) { // Each rectangle is compared 
+  for (let j = 0; j < allRectangle.length - 1; j++) { // to all the others and returns its status.
     console.log(allRectangle[i].collides(allRectangle[0]));
   }
 }

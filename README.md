@@ -6,7 +6,7 @@ So instead we will have a brief overview of classes in JavaScript just before we
 
 ## Theory
 ```javascript
-Classes
+## Classes
 class Human {
   constructor(firstName, name) {
     this.firstName = firstName;

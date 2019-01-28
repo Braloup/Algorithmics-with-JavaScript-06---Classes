@@ -8,7 +8,7 @@
 
 class Rectangle {
 
-  constructor(topLeftXPos, topLeftYPos, width, lenght) { // Constructor who make a rectangle.
+  constructor(topLeftXPos, topLeftYPos, width, lenght) { // let rectangle1 = new Rectangle(topLeftXPos, topLeftYPos, width, lenght));
 
     this.topLeftXPos = topLeftXPos;
     this.topLeftYPos = topLeftYPos;
@@ -16,13 +16,14 @@ class Rectangle {
     this.length = lenght;
   }
 
+// This code verify the collission between two rectangle.
   collides(otherRectangle) {
 
-    if (this.topLeftXPos < otherRectangle.topLeftXPos + otherRectangle.width && // This code verify the collission between two rectangle.
+    if (this.topLeftXPos < otherRectangle.topLeftXPos + otherRectangle.width &&
       this.topLeftXPos + this.width > otherRectangle.topLeftXPos &&
       this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.length &&
       this.length + this.topLeftYPos > otherRectangle.topLeftYPos) {
-      return true; // collision détectée !
+      return true; // If collision detected.
 
     } else {
       return "No collision detected";
